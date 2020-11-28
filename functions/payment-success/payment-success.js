@@ -1,7 +1,7 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 const handler = async event => {
   try {
-    console.log(event.body)
+    console.log(JSON.parse(event.body))
     return {
       statusCode: 200,
       body: JSON.stringify({ message: `Hello World` }),
